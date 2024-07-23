@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-//        Toast.makeText(this,B(""))
+        var inputApp3=intent.getStringExtra("input")
+        Toast.makeText(this,inputApp3, Toast.LENGTH_SHORT).show()
         setContentView(R.layout.activity_main)
         var sp:Spinner=findViewById(R.id.spinner)
         var input1:EditText=findViewById(R.id.input1)
@@ -62,3 +63,5 @@ class MainActivity : AppCompatActivity() {
         return ans;
     }
 }
+
+
