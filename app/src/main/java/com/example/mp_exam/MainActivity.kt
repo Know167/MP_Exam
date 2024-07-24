@@ -1,6 +1,7 @@
 package com.example.mp_exam
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -18,9 +19,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        var inputApp3=intent.getStringExtra("input")
-        Toast.makeText(this,inputApp3, Toast.LENGTH_SHORT).show()
         setContentView(R.layout.activity_main)
+
+        val msg=intent.getStringExtra("input")
+        if(msg!=null)Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
         var sp:Spinner=findViewById(R.id.spinner)
         var input1:EditText=findViewById(R.id.input1)
         var input2:EditText=findViewById(R.id.input2)
